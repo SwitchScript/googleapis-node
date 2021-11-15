@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
-class fireStoreDb {
 
+class FireBaseStore {
     constructor(key_json = "./firebase.json", encrpyt = false) {
         if (encrpyt) {
             var decode = Buffer.from(key_json.replace(/(.*base64\,)/ig, ""), 'base64').toString('utf8')
@@ -128,5 +128,5 @@ class fireStoreDb {
 }
 
 module.exports = {
-    fireStoreDb
-}
+    FireBaseStore
+};

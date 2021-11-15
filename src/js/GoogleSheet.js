@@ -1,5 +1,5 @@
 const { google } = require("googleapis");
-class gSheets {
+class GoogleSheets {
   constructor(sheet_id, keyFile) {
     this.sheet_id = sheet_id
     var parameter = {
@@ -342,5 +342,5 @@ class gSheets {
 
 
 module.exports = { 
-  gSheets
+  GoogleSheets
 }

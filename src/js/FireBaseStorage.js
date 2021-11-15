@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
 var folder = process.cwd();
-class storage {
+class FirebaseStorage {
     constructor(bucket_name, key_json = "./firebase.json", encrpyt = false) {
         if (encrpyt) {
             var decode = Buffer.from(key_json.replace(/(.*base64\,)/ig, ""), 'base64').toString('utf8');
@@ -37,5 +37,5 @@ class storage {
 }
 
 module.exports = {
-    storage
-}
+    FirebaseStorage
+};
